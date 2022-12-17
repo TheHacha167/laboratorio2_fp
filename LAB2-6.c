@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
    {
       if (cantidad[i] > 0)
       { // Si hay algún billete o moneda de este valor, se imprime
-         printf("%d %s\n", cantidad[i], nombre[i]);
+         printf(" %d %s\n", cantidad[i], nombre[i]);
       }
    }
 
