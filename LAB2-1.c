@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 {
    if (argc != 11)
    { // se verifica que se haya ingresado el número correcto de argumentos
-      printf("DEBE INTRODUCIR 10 ARGUMENTOS ENTEROS...\n");
+      printf("DEBE INTRODUCIR 10 ARGUMENTOS ENTEROS...");
       return 1;
    }
 
@@ -57,6 +57,7 @@ int main(int argc, char *argv[])
       else if (num % 2 == 0 && num % 3 == 0)
       {
          div_2_3[i] = num;
+         no_primo[i] = num;
       }
       else
       {
@@ -86,6 +87,7 @@ int main(int argc, char *argv[])
       else
       {
          printf("%i ", no_primo[i]);
+         // printf("%i  ", div_2_3[i]);
       }
    }
    printf("\n");
