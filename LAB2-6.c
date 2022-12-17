@@ -1,4 +1,14 @@
 /*
+
+
+SOLO FALLA LA SALIDA DE ERROR
+ printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
+LINEA 47
+
+
+
+
+
 En este ejercicio se debe implementar un programa en c que,
 dada una cantidad de eurossin céntimos que se ingresa
 como argumento en la ejecución del programa, la desgloseen
