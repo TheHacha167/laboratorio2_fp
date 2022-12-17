@@ -19,19 +19,24 @@ de 2 euros y de 1euro).
 */
 #include <stdio.h>
 #include <stdlib.h> // Incluir la biblioteca "stdlib.h" para poder utilizar la función atoi
+#include <string.h> // Incluir la biblioteca "string.h" para poder utilizar la función strlen
 
 int main(int argc, char *argv[])
 {
    int valor[9] = {500, 200, 100, 50, 20, 10, 5, 2, 1}; // Array con los valores de los billetes y monedas
-   char *nombre[9] = {"billetes de 500 euros", "billetes de 200 euros", "billetes de 100 euros",
-                      "billetes de 50 euros", "billetes de 20 euros", "billetes de 10 euros",
-                      "billetes de 5 euros", "monedas de 2 euros", "monedas de 1 euro"}; // Array con los nombres de los billetes y monedas
-   int cantidad[9] = {0};                                                                // Array para almacenar la cantidad de cada billete y moneda
-   int euros;                                                                            // Variable para almacenar la cantidad de euros
-   int i;                                                                                // Variable auxiliar para el ciclo for
+   char *nombre[9] = {"billetes/monedas de 500 euros", "billetes/monedas de 200 euros", "billetes/monedas de 100 euros",
+                      "billetes de 50 euros", "billetes/monedas de 20 euros", "billetes/monedasde 10 euros",
+                      "billetes/monedas de 5 euros", "billetes/monedas de 2 euros", "billetes/monedas de 1 euro"}; // Array con los nombres de los billetes y monedas
+   int cantidad[9] = {0};                                                                                          // Array para almacenar la cantidad de cada billete y moneda
+   int euros;                                                                                                      // Variable para almacenar la cantidad de euros
+   int i;                                                                                                          // Variable auxiliar para el ciclo for
 
-   // Lectura de la cantidad de euros desde el argumento de la ejecución del programa
-   euros = atoi(argv[1]); // La función atoi convierte una cadena de caracteres a un entero
+   // Verificación de que se ha introducido un argumento de tipo entero
+   if (argc != 2 || strlen(argv[1]) == 0 || !sscanf(argv[1], "%d", &euros))
+   {
+      printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
+      return 1; // Salida del programa con un código de error
+   }
 
    // Desglose de la cantidad de euros en el menor número posible de billetes y monedas
    for (i = 0; i < 9; i++)
