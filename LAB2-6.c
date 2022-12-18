@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
    int i;
 
    // Verificación argumento de tipo entero
-   if (argc != 2 || strlen(argv[1]) == 0 || !sscanf(argv[1], "%d", &euros))
+   if (argc != 2|| strlen(argv[1]) == 0 || !sscanf(argv[1], "%d", &euros))
    {
       printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
       // Salida del programa con un código de error

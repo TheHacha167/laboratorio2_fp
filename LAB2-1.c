@@ -1,4 +1,10 @@
 /*
+
+
+FUNCIONA
+
+
+
 Implementar un programa en C que, dados 10 números enteros que se introducen como argumentos en la ejecución
 del programa, devuelva enpantalla los números primos, los no primos y los divisibles a la vez por 2 y por3.
 Si el número de argumentos no es correcto devolverá DEBE INTRODUCIR 10ARGUMENTOS ENTEROS...
@@ -33,7 +39,7 @@ int main(int argc, char *argv[])
    if (argc != 11)
    { // se verifica que se haya ingresado el número correcto de argumentos
       printf("DEBE INTRODUCIR 10 ARGUMENTOS ENTEROS...");
-      return 1;
+      return 0;
    }
 
    int numeros[10]; // se crea un arreglo para almacenar los números ingresados
