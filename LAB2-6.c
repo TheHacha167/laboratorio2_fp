@@ -26,9 +26,6 @@ de 2 euros y de 1euro).
 #include <stdlib.h> //  función atoi
 #include <string.h> //  función strlen
 
-int euros = 0;
-int i = 0;
-
 int main(int argc, char *argv[])
 {
    int valor[9] = {500, 200, 100, 50, 20, 10, 5, 2, 1}; // Array con los valores de los billetes y monedas
@@ -39,25 +36,32 @@ int main(int argc, char *argv[])
    int euros;
    int i;
 
-   // Verificación argumento de tipo entero
-   if (argc != 2|| strlen(argv[1]) == 0 || !sscanf(argv[1], "%d", &euros))
+   // Comprobación del número de argumentos y de la validez del entero ingresado
+   if (argc != 2)
    {
       printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
-      // Salida del programa con un código de error
+      return 0;
    }
 
-   // Desglose de la cantidad de euros en el menor número posible de billetes y monedas
+   euros = atoi(argv[1]); // Convierte el argumento ingresado a un entero
+   if (euros == 0)
+   {
+      printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
+      return 0;
+   }
+
+   // algoritmo propio
    for (i = 0; i < 9; i++)
    {
       cantidad[i] = euros / valor[i]; // División entera para obtener la cantidad de billetes o monedas
-      euros %= valor[i];              // Módulo para obtener el resto de la división y continuar con el siguiente billete o moneda
+      euros %= valor[i];              // Módulo para obtener el resto  y continuar
    }
 
-   // Impresión del resultado
+   // salida
    for (i = 0; i < 9; i++)
    {
       if (cantidad[i] > 0)
-      { // Si hay algún billete o moneda de este valor, se imprime
+      { // salida
          printf(" %d %s\n", cantidad[i], nombre[i]);
       }
    }
