@@ -1,4 +1,8 @@
 /*
+
+TERMINADO Y COMPROBADO
+
+
 Implementar un programa en C que permita obtener el la matriz
 traspuestade una matriz (4x4). Los valores de la matriz se introducen
  como argumentosen la ejecución del programa
@@ -8,10 +12,15 @@ traspuestade una matriz (4x4). Los valores de la matriz se introducen
 
 int main(int argc, char *argv[])
 {
-   int matriz[4][4]; // Declaración de la matriz de 4x4
-   int i, j;         // Variables auxiliares para los ciclos for
+   int matriz[4][4];
+   int i = 0, j = 0;
+   if (argc != 17)
+   {
+      printf("DEBE INTRODUCIR 16 ARGUMENTOS ENTEROS...");
+      return 0;
+   }
 
-   // Lectura de los elementos de la matriz desde los argumentos de la ejecución del programa
+   // Lectura de los elementos 
    for (i = 0; i < 4; i++)
    {
       for (j = 0; j < 4; j++)
@@ -20,34 +29,34 @@ int main(int argc, char *argv[])
       }
    }
 
-   // Impresión de la matriz original
-   printf("Matriz original:\n");
+   // Salida original
+   printf("MATRIZ ENTRADA:\n");
    for (i = 0; i < 4; i++)
    {
       for (j = 0; j < 4; j++)
       {
-         printf("%d ", matriz[i][j]);
+         printf(" %d ", matriz[i][j]);
       }
       printf("\n");
    }
 
-   // Cálculo de la matriz traspuesta
-   int traspuesta[4][4]; // Declaración de la matriz traspuesta
+   // Cáculo de la traspuesta
+   int traspuesta[4][4];
    for (i = 0; i < 4; i++)
    {
       for (j = 0; j < 4; j++)
       {
-         traspuesta[i][j] = matriz[j][i]; // Asignación del elemento correspondiente
+         traspuesta[i][j] = matriz[j][i];
       }
    }
 
-   // Impresión de la matriz traspuesta
-   printf("Matriz traspuesta:\n");
+   // Salida traspuesta
+   printf("MATRIZ TRASPUESTA: \n");
    for (i = 0; i < 4; i++)
    {
       for (j = 0; j < 4; j++)
       {
-         printf("%d ", traspuesta[i][j]);
+         printf(" %d ", traspuesta[i][j]);
       }
       printf("\n");
    }
