@@ -6,16 +6,16 @@
 
 int main(int argc, char *argv[])
 {
-    char *str = argv[1];
-
-    int izquierda = 0;
-    int derecha = strlen(str) - 1;
-
     if (argc != 2)
     {
         printf("DEBE INTRODUCIR UN VALOR TIPO CADENA...");
         return (0);
     }
+    char *str = argv[1];
+
+    int izquierda = 0;
+    int derecha = strlen(str) - 1;
+
     // Comparamos caracteres para ver si son iguales con un while
     while (derecha > izquierda)
     {
