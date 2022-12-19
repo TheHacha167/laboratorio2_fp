@@ -1,7 +1,7 @@
 /*
 
 
-FUNCIONA
+TERMINADO Y COMPROBADO
 
 
 
