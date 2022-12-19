@@ -11,6 +11,11 @@ int main(int argc, char *argv[])
     int izquierda = 0;
     int derecha = strlen(str) - 1;
 
+    if (argc != 2)
+    {
+        printf("DEBE INTRODUCIR UN VALOR TIPO CADENA...");
+        return (0);
+    }
     // Comparamos caracteres para ver si son iguales con un while
     while (derecha > izquierda)
     {
@@ -21,12 +26,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    printf("La palabra '%s' es un pal\xa1ndromo\n", str);
+    printf("La palabra '%s' no es un pal\xa1ndromo\n", str);
 
-    if (argc != 2)
-    {
-        printf("DEBE INTRODUCIR UN VALOR TIPO CADENA...");
-        return (0);
-    }
     return 0;
 }
