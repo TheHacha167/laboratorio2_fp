@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) { /*funci�n principal*/
     int i=0;
     char *p;
     if (argc != 11){
-        printf("DEBE INTRODUCIR 10 ARGUMENTOS ENTEROS...");
+        printf("DEBE INTRODUCIR 10 ARGUMENTOS ENTEROS...\n");
         return(0);
     }
     for (i = 1; i <= 10; i++){ /*bucle transformar argumentos en enteros*/
