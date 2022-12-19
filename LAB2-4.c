@@ -1,4 +1,9 @@
 /*
+
+
+TERMINADO Y COMPROBADO
+
+
 Implementar un programa en C que permita obtener el número de
 positivosde una matriz (4x4) y calcular la suma de los elementos de la diagonal.
 
@@ -11,7 +16,12 @@ int main(int argc, char *argv[])
    int i, j;          // Variables auxiliares para los ciclos for
    int positivos = 0; // Contador para el número de positivos
    int suma = 0;      // Variable para almacenar la suma de los elementos de la diagonal
-
+   // comprobamos el numero de argumentos
+   if (argc != 17)
+   {
+      printf("DEBE INTRODUCIR 16 ARGUMENTOS ENTEROS...");
+      return 0;
+   }
    // Lectura de los elementos de la matriz desde los argumentos de la ejecución del programa
    for (i = 0; i < 4; i++)
    {
@@ -38,8 +48,17 @@ int main(int argc, char *argv[])
    }
 
    // Impresión del resultado
-   printf("Número de positivos: %d\n", positivos);
-   printf("Suma de la diagonal: %d\n", suma);
+   printf("MATRIZ: \n");
+   for (i = 0; i < 4; i++)
+   {
+      for (j = 0; j < 4; j++)
+      {
+         printf(" %d ", matriz[i][j]);
+      }
+      printf("\n");
+   }
+   printf("POSITIVOS: %d\n", positivos);
+   printf("SUMA DIAGONAL: %d\n", suma);
 
    return 0;
 }
