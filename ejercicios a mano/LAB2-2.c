@@ -21,12 +21,12 @@ int main(int argc, char *argv[])
     {
         if (str[izquierda++] != str[derecha--])
         {
-            printf("La palabra '%s' es un pal\xa1ndromo\n", str);
+            printf("La palabra '%s' no es un pal\xa1ndromo\n", str);
             return 0;
         }
     }
 
-    printf("La palabra '%s' no es un pal\xa1ndromo\n", str);
+    printf("La palabra '%s' es un pal\xa1ndromo\n", str);
 
     return 0;
 }
