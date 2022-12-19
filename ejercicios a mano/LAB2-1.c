@@ -41,11 +41,11 @@ void primos_div23(long vector[]){
         }
     }
     printf("PRIMOS: ");
-    imprimir_nums( primos, p);
+    imprimir_nums(primos , p);
     printf("\nNO PRIMOS: ");
-    imprimir_nums( noPrimos, np);
+    imprimir_nums(noPrimos , np);
     printf("\nDIVISIBLES por 2 y 3: ");
-    imprimir_nums( divisibles23, d);
+    imprimir_nums(divisibles23 , d);
 
 }
 
