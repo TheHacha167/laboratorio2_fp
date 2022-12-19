@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("DEBE INTRODUCIR UN VALOR TIPO CADENA...");
+        printf("DEBE INTRODUCIR 1 VALOR TIPO CADENA...");
         return (0);
     }
     char *str = argv[1];
