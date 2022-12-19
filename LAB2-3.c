@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
    // Verificar que se hayan proporcionado dos argumentos
    if (argc != 3)
    {
-      printf("DEBE INTRODUCIR 2 ARGUMENTOS TIPO CADENA…\n");
-      return 1;
+      printf("DEBE INTRODUCIR 2 ARGUMENTOS TIPO CADENA...");
+      return 0;
    }
 
    // Obtener la cadena y la subcadena de los argumentos
