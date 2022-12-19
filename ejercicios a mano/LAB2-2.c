@@ -4,17 +4,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
-int main(int argc, char *argv[]){
-    char str[] = argv[0];
+int main(int argc, char *argv[])
+{
+    char *str = argv[1];
 
     int izquierda = 0;
     int derecha = strlen(str) - 1;
 
-// Comparamos caracteres para ver si son iguales con un while
-    while (derecha > izquierda) {
-        if (str[izquierda++] != str[derecha--]) {
+    // Comparamos caracteres para ver si son iguales con un while
+    while (derecha > izquierda)
+    {
+        if (str[izquierda++] != str[derecha--])
+        {
             printf("%s no es un palindromo\n", str);
             return 0;
         }
@@ -22,9 +23,10 @@ int main(int argc, char *argv[]){
 
     printf("%s es un palindromo\n", str);
 
-    if (argc != 2){
+    if (argc != 2)
+    {
         printf("DEBE INTRODUCIR UN VALOR TIPO CADENA\n");
-        return(0);
+        return (0);
     }
     return 0;
 }
