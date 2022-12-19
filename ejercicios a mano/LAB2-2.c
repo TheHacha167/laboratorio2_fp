@@ -16,12 +16,12 @@ int main(int argc, char *argv[])
     {
         if (str[izquierda++] != str[derecha--])
         {
-            printf("%s no es un palindromo\n", str);
+            printf("La palabra '%s' es un pal\xa1ndromo\n", str);
             return 0;
         }
     }
 
-    printf("%s es un palindromo\n", str);
+    printf("La palabra '%s' es un pal\xa1ndromo\n", str);
 
     if (argc != 2)
     {
