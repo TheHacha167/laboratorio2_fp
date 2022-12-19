@@ -1,4 +1,8 @@
 /*
+
+TERMINADO Y COMPROBADO
+
+
 Implementar un programa en C para determinar si una
 subcadena especificada ocurre en una cadena dada, y si es así,
 escribir un asterisco (*) enla primera posición de cada ocurrencia.
