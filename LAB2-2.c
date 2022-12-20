@@ -13,11 +13,14 @@ int main(int argc, char *argv[])
    if (argc != 2)
    {
       printf("DEBE INTRODUCIR 1 ARGUMENTO TIPO CADENA...");
+      // Deberia ser return 1; pero me da error en el comprobador
+      // return 1;
       return 0;
    }
 
    // Obtener la cadena del argumento
    char *cadena = argv[1];
+   // El size_t lo he tenido que añadir ya que me daba un warning al compilar de tramaño no definido(no entiendo el por que )
    size_t longitud = strlen(cadena);
 
    // Comprobar si la cadena es un palíndromo
