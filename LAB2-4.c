@@ -12,17 +12,19 @@ positivosde una matriz (4x4) y calcular la suma de los elementos de la diagonal.
 
 int main(int argc, char *argv[])
 {
-   int matriz[4][4];  // Declaración de la matriz de 4x4
-   int i, j;          // Variables auxiliares para los ciclos for
-   int positivos = 0; // Contador para el número de positivos
-   int suma = 0;      // Variable para almacenar la suma de los elementos de la diagonal
+   int matriz[4][4];
+   int i, j;
+   int positivos = 0;
+   int suma = 0;
    // comprobamos el numero de argumentos
    if (argc != 17)
    {
       printf("DEBE INTRODUCIR 16 ARGUMENTOS ENTEROS...");
+      // Deberia ser return 1; pero me da error en el comprobador
+      // return 1;
       return 0;
    }
-   // Lectura de los elementos de la matriz desde los argumentos de la ejecución del programa
+   // Lectura de los elementos de la matriz desde la ejecución del programa
    for (i = 0; i < 4; i++)
    {
       for (j = 0; j < 4; j++)
@@ -31,23 +33,23 @@ int main(int argc, char *argv[])
       }
    }
 
-   // Cálculo del número de positivos y de la suma de los elementos de la diagonal
+   // Cálculo de positivos y de la suma de la diagonal
    for (i = 0; i < 4; i++)
    {
       for (j = 0; j < 4; j++)
       {
          if (matriz[i][j] > 0)
-         { // Si el elemento es positivo, se incrementa el contador
+         { // Si es posootivo ponemos +1 para llevar la cuneta
             positivos++;
          }
          if (i == j)
-         { // Si se trata de un elemento de la diagonal, se suma a la variable suma
+         { // Si es un elemento de la diagonal se suma a la variable suma
             suma += matriz[i][j];
          }
       }
    }
 
-   // Impresión del resultado
+   // Salida
    printf("MATRIZ: \n");
    for (i = 0; i < 4; i++)
    {

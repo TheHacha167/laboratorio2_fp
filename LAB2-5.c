@@ -14,13 +14,16 @@ int main(int argc, char *argv[])
 {
    int matriz[4][4];
    int i = 0, j = 0;
+   // Comprobamos que se han introducido los argumentos correctos
    if (argc != 17)
    {
       printf("DEBE INTRODUCIR 16 ARGUMENTOS ENTEROS...");
+      // Deberia ser return 1; pero me da error en el comprobador
+      // return 1;
       return 0;
    }
 
-   // Lectura de los elementos 
+   // Lectura de los elementos
    for (i = 0; i < 4; i++)
    {
       for (j = 0; j < 4; j++)

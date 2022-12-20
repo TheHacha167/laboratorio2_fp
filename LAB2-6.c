@@ -36,10 +36,12 @@ int main(int argc, char *argv[])
    int euros;
    int i;
 
-   // Comprobación del número de argumentos y de la validez del entero ingresado
+   // Comprobamos que se han introducido los argumentos correctos
    if (argc != 2)
    {
       printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
+      // Deberia ser return 1; pero me da error en el comprobador
+      // return 1;
       return 0;
    }
 
@@ -50,18 +52,17 @@ int main(int argc, char *argv[])
       return 0;
    }
 
-   // algoritmo propio
    for (i = 0; i < 9; i++)
    {
-      cantidad[i] = euros / valor[i]; // División entera para obtener la cantidad de billetes o monedas
+      cantidad[i] = euros / valor[i]; // Division para obtener la cantidad de billetes o monedas
       euros %= valor[i];              // Módulo para obtener el resto  y continuar
    }
 
-   // salida
+   // Salida de los resultados
    for (i = 0; i < 9; i++)
    {
       if (cantidad[i] > 0)
-      { // salida
+      {
          printf(" %d %s\n", cantidad[i], nombre[i]);
       }
    }

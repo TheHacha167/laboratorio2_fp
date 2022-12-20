@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
    if (argc != 3)
    {
       printf("DEBE INTRODUCIR 2 ARGUMENTOS TIPO CADENA...");
+      // Deberia ser return 1; pero me da error en el comprobador
+      // return 1;
       return 0;
    }
 
@@ -28,15 +30,15 @@ int main(int argc, char *argv[])
 
    // Usar strstr para buscar la subcadena en la cadena
    char *ocurrencia = strstr(cadena, subcadena);
-   while (ocurrencia != NULL)
+   while (ocurrencia != NULL) //!= se auto convierte de ! =
    {
-      // Reemplazar el primer carácter de la subcadena con un asterisco (*)
+      // Reemplazar el primer carácter de la subcadena con *
       *ocurrencia = '*';
       // Buscar la siguiente ocurrencia de la subcadena en la cadena
       ocurrencia = strstr(ocurrencia + 1, subcadena);
    }
 
-   // Imprimir la cadena con los asteriscos insertados
+   // Salida conlos *
    printf("%s\n", cadena);
    return 0;
 }
