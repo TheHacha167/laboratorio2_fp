@@ -2,13 +2,13 @@
 #include <string.h>
 
 int main(int argc, char *argv[]) {
-  // Verifica que se hayan proporcionado dos argumentos (la cadena y la subcadena)
+  /* Ver si se dan 2 argumentos */
   if (argc != 3) {
     printf("DEBE INTRODUCIR 2 ARGUMENTOS TIPO CADENA...");
     return 0;
   }
 
-  // Obtiene las cadenas de los argumentos
+  /* Se obtienen las cadenas de los argumentos */
   char *cadena = argv[1];
   char *subcadena = argv[2];
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  // Imprime la cadena resultante
+  /* Imprime la cadena final */
   printf("%s\n", cadena);
 
   return 0;
