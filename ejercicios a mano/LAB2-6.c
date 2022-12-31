@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     printf ("Introduce una cantidad de euros (sin centimos): ");
     scanf ("%d", &cantidad);*/
     cantidad = atoi(argv[1]);
-    if (argc != 2)
+    if (argc == 0)
     {
 
         printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
