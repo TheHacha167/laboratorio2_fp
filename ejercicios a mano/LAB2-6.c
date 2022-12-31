@@ -11,11 +11,11 @@ int main(int argc, char *argv[])
     printf ("Introduce una cantidad de euros (sin centimos): ");
     scanf ("%d", &cantidad);*/
     cantidad = atoi(argv[1]);
-    if (argc == 0)
+    if (argc != 2)
     {
 
         printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
-        return -1;
+        return 0;
     }
     else
     {
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         {
             printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...\n");
             // system("pause");
-            return -1;
+            return 0;
         }
         cuenta_billetes_monedas(cantidad, valor);
         /*system ("pause");*/
