@@ -15,14 +15,14 @@ int main(int argc, char *argv[])
     {
 
         printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
-        return 0;
+        return -1;
     }
     else
     {
         if (cantidad <= 0)
         {
-            printf("ERROR: La cantidad debe ser mayor que cero.\n");
-            system("pause");
+            printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...\n");
+            // system("pause");
             return -1;
         }
         cuenta_billetes_monedas(cantidad, valor);
