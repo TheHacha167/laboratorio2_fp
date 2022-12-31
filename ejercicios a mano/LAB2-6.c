@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     {
 
         printf("DEBE INTRODUCIR 1 ARGUMENTO DE TIPO ENTERO...");
+        return 0;
     }
     else
     {
@@ -43,7 +44,6 @@ void cuenta_billetes_monedas(int cantidad, int valor[])
         {
             printf(" %d billetes/monedas de %d euros \n", n, valor[i]);
         }
-            i++;
-
+        i++;
     }
 }
